@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order no:</strong>
+  <%= @order.order_no %>
+</p>
+
+<p>
+  <strong>Order type:</strong>
+  <%= @order.order_type %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @order.total %>
+</p>
+
+<p>
+  <strong>Tracking number:</strong>
+  <%= @order.tracking_number %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @order.product_id %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
