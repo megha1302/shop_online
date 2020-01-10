@@ -40,6 +40,14 @@
     <%= form.label :user_id %>
     <%= form.text_field :user_id %>
   </div>
+  <%= form.fields_for :product do |product_fields| %>
+    <div class="field" >
+      <%= product_fields.label :name %>
+      <%= product_fields.select :product_id,options_for_select(Product.all.collect{|c| [c.id]}),class: 'form-control' %>
+  </div> 
+   
+  <% end %>  
+    
 
   <div class="actions">
     <%= form.submit %>

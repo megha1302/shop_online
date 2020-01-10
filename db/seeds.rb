@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+5.times do
+    Product.create([{
+        name:Faker::Commerce.product_name,
+        description:Faker::String.random,
+        price:Faker::Commerce.price,
+        productsku:Faker::Types.rb_integer,
+        image: Faker::Avatar.image(slug: "my-own-slug", size: "50x50", format: "jpg")
+
+
+        }])
+end
+

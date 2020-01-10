@@ -10,7 +10,38 @@
       </ul>
     </div>
   <% end %>
+  <%= form.fields_for :order do |order_fields| %>
 
+        <div class="field">
+          <%= order_fields.label :orderno %>
+          <%= order_fields.number_field :orderno %>
+        </div>
+
+      <div class="field">
+        <%= order_fields.label :trackingno %>
+        <%= order_fields.number_field :trackingno %>
+      </div>
+
+      <div class="field">
+        <%= order_fields.label :paymenttype %>
+        <%= order_fields.text_field :paymenttype %>
+      </div>
+
+      <div class="field">
+        <%= order_fields.label :tamount %>
+        <%= order_fields.text_field :tamount %>
+      </div>
+
+      <div class="field">
+        <%= order_fields.label :orderdate %>
+        <%= order_fields.datetime_select :orderdate %>
+      </div>
+
+      <div class="field">
+        <%= order_fields.label :user_id %>
+        <%= order_fields.text_field :user_id %>
+      </div>
+  <%end%> 
   <div class="field">
     <%= form.label :quantity %>
     <%= form.number_field :quantity %>
